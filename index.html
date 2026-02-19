@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Position , flex , grid  */
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub {
+        width: 500px;
+        height: 500px;
+        background:red;
+        border:1px solid black;
+
+        align-content:center
+    }
+
+    .box {
+        width: 250px;
+        height: 250px;
+        background:white;
+
+        margin:auto;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="sub">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+<script src="./script.js">
+    document.getElementById("clic").addEventListener("click", () => {
+        console.log("button")
+    })
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("parent")
+    })
+    // const s=new Set()    
+    // s.add(1)
+    // s.add(2)
+    // console.log(s)
+    // console.log(Array.from(s))
+</script>
+
+</html>

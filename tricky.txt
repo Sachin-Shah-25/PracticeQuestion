@@ -1,0 +1,257 @@
+Loop Phase 
+Flow idea 🧠
+
+1️⃣ timers (setTimeout)
+2️⃣ pending callbacks
+3️⃣ idle/prepare
+4️⃣ poll
+5️⃣ ✅ check → setImmediate yahan run hota hai
+6️⃣ close callbacks // socket close callback
+
+ECMAScript specification ka defined algorithm
+1️⃣ Agar koi Boolean hai → Boolean → Number
+2️⃣ Agar Number aur String hai → String → Number
+3️⃣ Agar Object hai → Primitive mein convert
+
+0 == false
+0 === false
+
+"" == false 
+
+"" === false
+
+[] == false
+
+[] === false 
+
+[] == 0 
+
+[] === 0 
+
+[0] == 0 
+
+[1] == 1 
+
+[1,2] == "1,2" 
+
+null == 0 
+
+undefined == 0 
+
+NaN == NaN 
+
+NaN === NaN 
+
+Object.is(NaN, NaN) 
+
+typeof null 
+
+[] + [] 
+
+[] + {} 
+
+[] + [] 
+
+[] + {} 
+
+{} + [] → 0 (in some contexts)
+
+[1,2] + [3,4] 
+
+{} == {} 
+
+[] == [] 
+
+parseInt("10px") 
+
+parseInt("px10") 
+
+Number(" ") 
+
+Boolean("false") 
+
+!!"false" 
+
+0.1 + 0.2 === 0.3 
+
+// 1
+console.log(1 + "2" + 3);
+
+// 2
+console.log("5" - 2);
+
+// 3
+console.log([] == false);
+
+// 4
+console.log(typeof null);
+
+// 5
+console.log(NaN === NaN);
+
+// 6
+console.log([] + []);
+
+// 7
+console.log({} + []);
+
+// 8
+console.log(true + true);
+
+// 9
+console.log("5" * "2");
+
+// 10
+console.log(null == undefined);
+
+// 11
+console.log(0 == false);
+
+// 12
+console.log("" == false);
+
+// 13
+console.log([1] == 1);
+
+// 14
+console.log([1,2] == "1,2");
+
+// 15
+console.log(Boolean("false"));
+
+// 16
+console.log(!!"");
+
+// 17
+console.log(parseInt("10px"));
+
+// 18
+console.log(parseInt("px10"));
+
+// 19
+console.log(Number(" "));
+
+// 20
+console.log(0.1 + 0.2 === 0.3);
+
+// 21
+console.log(typeof []);
+
+// 22
+console.log(typeof function() {});
+
+// 23
+console.log("2" > 1);
+
+// 24
+console.log("2" < "12");
+
+// 25
+console.log([] === []);
+
+// 26
+console.log({} === {});
+
+// 27
+console.log(1 + +"2" + "3");
+
+// 28
+console.log(true == "1");
+
+// 29
+console.log(false == "0");
+
+// 30
+console.log([] + {});
+
+// 1
+console.log([] == ![]);
+
+// 2
+console.log([] == ![] + []);
+
+// 3
+console.log(![] + []);
+
+// 4
+console.log([] + ![]);
+
+// 5
+console.log([] + {});
+
+// 6
+console.log({} + []);
+
+// 7
+console.log({} + {});
+
+// 8
+console.log(+true);
+
+// 9
+console.log(+[]);
+
+// 10
+console.log(+{});
+
+// 11
+console.log([] == 0);
+
+// 12
+console.log([] == "");
+
+// 13
+console.log("" == 0);
+
+// 14
+console.log("0" == false);
+
+// 15
+console.log("0" === false);
+
+// 16
+console.log(null >= 0);
+
+// 17
+console.log(null > 0);
+
+// 18
+console.log(null == 0);
+
+// 19
+console.log(undefined == 0);
+
+// 20
+console.log(undefined >= 0);
+
+// 21
+console.log([null] == "");
+
+// 22
+console.log([undefined] == "");
+
+console.log([undefined,undefined]=="")
+
+// 23
+console.log([[]] == "");
+
+// 24
+console.log([[[]]] == "");
+
+// 25
+console.log([] == []);
+
+// 26
+console.log([1] + [2,3]);
+
+// 27
+console.log([1] - [1]);
+
+// 28
+console.log([1,2] - [2]);
+
+// 29
+console.log("b" + "a" + +"a" + "a");
+
+// 30
+console.log(typeof NaN);
