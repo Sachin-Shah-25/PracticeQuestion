@@ -19,6 +19,22 @@ str=str+first+last;
 console.log(str)
 
 
+// Question 2 -->  Reverse a String O(n)
+str="I am sachin shah"
+let j=str.length-1;
+let word="";
+let finalString=""
+let finalPoint=str.indexOf(" ");
+while(j>=0){
+  word=str.charAt(j)+word;
+  if(str.charAt(j)==" "){
+    finalString=finalString+word;
+    word=""
+  }
+  j--;  
+}
+console.log(finalString+" "+str.substring(0,finalPoint))
+
 
 
 
