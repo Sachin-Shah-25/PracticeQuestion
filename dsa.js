@@ -2,6 +2,31 @@
 import { LinkList } from 'js-sdsl'
 let arr = [5, 2, 6, 4, 1, 3]
 
+// Question 1 -->  alternate string merge O(n + m)
+const str1 = "shah";
+const str2 = "sachin";
+let str = "";
+let i = 0;
+let j = 0;
+while (i < str1.length && j < str2.length) {
+  str = str + str1.at(i) + str2.at(j);
+  i++;
+  j++;
+}
+const first=str1.substring(i);
+const last=str2.substring(j);
+str=str+first+last;
+console.log(str)
+
+
+
+
+
+
+
+
+
+
 function MergeSort(arr) {
     if (arr.length <= 1) return arr;
     let mid = Math.floor(arr.length / 2)
